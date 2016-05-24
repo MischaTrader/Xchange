@@ -1,0 +1,24 @@
+version control => git (gratis account aanmaken via github.com)!!! ==> cursus via code school
+project => forken
+pull request 
+
+Xchange githup project van aanmaken!
+
+bundler inz gems => tbv het werken met externe code! (package manager)!
+
+requirements
+gem device moet worden gebruikt!
+gem active admin mbt CRUD (alle formulieren die je kunt maken valt onder CRUD)
+
+1. project aanmaken op git / - gebruik pencil tool om mocups maken!
+2. schermen ontwerpen 
+- functioneel 
+- technisch inrichten database/ models--classes/ communicatie stroom
+
+
+CG werkt met iteraties --> welke stappen herken je!
+1.  0 itereatie--> project opstarten administratieve zaken via klantgesprek
+2.  1 iterartie --> gedetailleerde requirements en testen
+3.  
+
+via email terugkoppelen!
