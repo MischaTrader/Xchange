@@ -1,0 +1,28 @@
+<%= link_to("<< Exchange Rates", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="exchangerates new">
+  <h3>Create Exchange Rate</h3>
+
+  <%= form_for(:exchangerate, :url => {:action => 'create'}) do |f| %>
+
+    <table summary="Exchangerate form fields">
+      <tr>
+        <th>From_Currency</th>
+        <td><%= f.text_field(:from_currency) %></td>
+      </tr>
+      <tr>
+        <th>To_Currency</th>
+        <td><%= f.text_field(:to_currency) %></td>
+      </tr>
+      <tr>
+        <th>Rate</th>
+        <td><%= f.text_field(:rate) %></td>
+      </tr>
+    </table>
+
+    <div class="form-buttons">
+      <%= submit_tag("Create Exchange Rate") %>
+    </div>
+
+  <% end %>
+</div>

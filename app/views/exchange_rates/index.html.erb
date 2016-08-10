@@ -1,0 +1,31 @@
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<div class="exchangerates index">
+  <h2>Exchange Rates</h2>
+
+  <%= link_to("Add New Exchange Rate", {:action => 'new'}, :class => 'action new') %>
+
+  <table class="listing" summary="ExchangeRate list">
+    <tr class="header">
+      <th>From_Currency</th>
+      <th>To_Currency</th>
+      <th>Rate</th>
+      <th>Actions</th>
+    </tr>
+    <% @exchangerates.each do |exchangerate| %>
+    <tr>
+      <td><%= exchangerate.from_currency %></td>
+      <td><%= exchangerate.to_currency %></td>
+      <td><%= exchangerate.rate %></td>
+      <td class="actions">
+      <%= link_to("History", {:action => 'show', :id => exchangerate.id}, :class => 'action show') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+

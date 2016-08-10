@@ -1,0 +1,29 @@
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<div class="currencies index">
+  <h2>Currencies</h2>
+
+  <%= link_to("Add New Currency", {:action => 'new'}, :class => 'action new') %>
+
+  <table class="listing" summary="Currency list">
+    <tr class="header">
+      <th>Name</th>
+      <th>ISO</th>
+      <th>Actions</th>
+    </tr>
+    <% @currencies.each do |currency| %>
+    <tr>
+      <td><%= currency.name %></td>
+      <td><%= currency.iso %></td>
+      <td class="actions">
+        <%= link_to("Edit", {:action => 'edit', :id => currency.id}, :class => 'action edit') %>
+        <%= link_to("Delete", {:action => 'delete', :id => currency.id}, :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>
