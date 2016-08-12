@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160801193621) do
+ActiveRecord::Schema.define(version: 20160812130729) do
 
   create_table "currencies", force: :cascade do |t|
     t.string   "name",       limit: 255, null: false
@@ -20,16 +20,16 @@ ActiveRecord::Schema.define(version: 20160801193621) do
     t.datetime "updated_at"
   end
 
-  create_table "exchangerates", force: :cascade do |t|
+  create_table "exchange_rates", force: :cascade do |t|
     t.integer  "from_currency_id", limit: 4
     t.integer  "to_currency_id",   limit: 4
-    t.decimal  "rate",                       precision: 10, null: false
+    t.decimal  "rate",                       precision: 8, scale: 5, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "exchangerates", ["from_currency_id"], name: "index_exchangerates_on_from_currency_id", using: :btree
-  add_index "exchangerates", ["to_currency_id"], name: "index_exchangerates_on_to_currency_id", using: :btree
+  add_index "exchange_rates", ["from_currency_id"], name: "index_exchange_rates_on_from_currency_id", using: :btree
+  add_index "exchange_rates", ["to_currency_id"], name: "index_exchange_rates_on_to_currency_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name", limit: 255, null: false

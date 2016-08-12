@@ -1,6 +1,6 @@
 class CurrenciesController < ApplicationController
   
-  layout false
+  #layout false
   
   def index
     @currencies = Currency.all
