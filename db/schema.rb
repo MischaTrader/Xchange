@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160812130729) do
+ActiveRecord::Schema.define(version: 20160911160026) do
 
   create_table "currencies", force: :cascade do |t|
     t.string   "name",       limit: 255, null: false
@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 20160812130729) do
   end
 
   create_table "exchange_rates", force: :cascade do |t|
-    t.integer  "from_currency_id", limit: 4
-    t.integer  "to_currency_id",   limit: 4
+    t.string   "from_currency_id", limit: 3
+    t.string   "to_currency_id",   limit: 3
     t.decimal  "rate",                       precision: 8, scale: 5, null: false
     t.datetime "created_at"
     t.datetime "updated_at"

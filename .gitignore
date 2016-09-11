@@ -12,5 +12,7 @@
 !/log/.keep
 /tmp
 
+
 database.yml
+secrets.yml
 

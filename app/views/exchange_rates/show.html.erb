@@ -1,2 +1,29 @@
-<h1>ExchangeRates#show</h1>
-<p>Find me in app/views/exchange_rates/show.html.erb</p>
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="exchangerates show">
+  <h3>Show Exchange Rates</h3>
+
+  <table summary="Exchange Rate detail view">
+    <tr>
+      <th>Van Currency</th>
+      <td><%= @exchangerate.from_currency_id %></td>
+    </tr>
+       <tr>
+      <th>Naar Currency</th>
+      <td><%= @exchangerate.to_currency_id %></td>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <td><%= @exchangerate.rate %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @exchangerate.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @exchangerate.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

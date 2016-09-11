@@ -1,8 +1,4 @@
-<% if !flash[:notice].blank? %>
-  <div class="notice">
-    <%= flash[:notice] %>
-  </div>
-<% end %>
+<% @page_title = "Exchange Rates" %>
 
 <div class="exchangerates index">
   <h2>Exchange Rates</h2>
@@ -11,15 +7,15 @@
 
   <table class="listing" summary="ExchangeRate list">
     <tr class="header">
-      <th>From_Currency</th>
-      <th>To_Currency</th>
+      <th>Van Currency</th>
+      <th>Naar Currency</th>
       <th>Rate</th>
       <th>Actions</th>
     </tr>
     <% @exchangerates.each do |exchangerate| %>
     <tr>
-      <td><%= exchangerate.from_currency %></td>
-      <td><%= exchangerate.to_currency %></td>
+      <td><%= exchangerate.from_currency_id %></td>
+      <td><%= exchangerate.to_currency_id %></td>
       <td><%= exchangerate.rate %></td>
       <td class="actions">
       <%= link_to("History", {:action => 'show', :id => exchangerate.id}, :class => 'action show') %>

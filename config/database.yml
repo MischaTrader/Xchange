@@ -13,9 +13,9 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: 
-  password: 
-  host: 
+  username: root
+  password: Levitrader1
+  host: localhost
 
 development:
   <<: *default
@@ -51,4 +51,4 @@ production:
   <<: *default
   database: Xchange_production
   username: Xchange
-  password:
+  password: <%= ENV['XCHANGE_DATABASE_PASSWORD'] %>

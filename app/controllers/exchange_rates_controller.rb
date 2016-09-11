@@ -1,6 +1,6 @@
 class ExchangeRatesController < ApplicationController
   
- #layout false
+  layout "admin"
   
   def index
     @exchangerates = ExchangeRate.all

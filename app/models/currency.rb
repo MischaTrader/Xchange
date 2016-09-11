@@ -1,6 +1,6 @@
 class Currency < ActiveRecord::Base
 
-  has_many :exchangerates
+  has_many :exchange_rates
      
   #scope :visible, lambda { where(:visible => true) }
   #scope :invisible, lambda { where(:visible => false) }
