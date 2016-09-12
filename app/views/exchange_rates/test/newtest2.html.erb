@@ -3,7 +3,7 @@
 <div class="exchangerates new">
   <h3>Create Exchange Rate</h3>
 
-  <%= form_for(:exchangerate, :url => {:action => 'create'}) do |f| %>
+  <%= form_for(:exchangerate, :url => {:action => 'create'}, html: {method: 'get'}) do |f| %>
 
     <table summary="Exchangerate form fields">
       <tr>

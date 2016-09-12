@@ -20,13 +20,24 @@ class ExchangeRatesController < ApplicationController
     # Save the object
     if @exchangerate.save
     # If save succeeds, redirect to the index action
-      flash[:notice] = "exchange rate created successfully."
+     flash[:notice] = "exchange rate created successfully."
       redirect_to(:action => 'index')
     else
       #If save fails, redisplay the form so user can fix problems
      render('new')
     end
+   end 
+    
+    def delete
+    @exchangerate = ExchangeRate.find(params[:id])
   end
+
+  def destroy
+    exchangerate = ExchangeRate.find(params[:id]).destroy
+    flash[:notice] = "Exchange Rate destroyed successfully."
+    redirect_to(:action => 'index')
+  end
+
 
 private
 

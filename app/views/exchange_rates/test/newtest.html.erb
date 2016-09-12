@@ -1,0 +1,26 @@
+<%= link_to("<< Exchange Rates", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="exchangerates new">
+  <h3>Create Exchange Rate</h3>
+
+  <form action="/exchange_rate/create" method="post">
+  
+   <table summary="Exchangerate form fields">
+      <tr>
+        <th>Van Currency</th>
+    <td><input type="text" name="from_currency_id" /></td>
+     </tr>
+     <tr>
+        <th>Naar Currency</th>
+    <td><input type="text" name="to_currency_id" /></td>    
+    </tr>
+    <tr>
+    <th>Exchange Rate</th>
+    <td><input type="text" name="rate" /></td>
+  </tr>
+  </table>
+    
+    <div class="form-buttons">
+    <input type="submit Exchange Rate" name="commit" value="Create Exchange Rate">
+   </form>
+  </div>

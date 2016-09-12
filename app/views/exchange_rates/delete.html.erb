@@ -1,0 +1,17 @@
+<%= link_to("<< Exchange Rate", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="exchange rate delete">
+  <h3>Delete Exchange Rate</h3>
+
+  <%= form_for(:exchangerate, :url => {:action => 'destroy', :id => @exchangerate.id}) do |f| %>
+
+    <p>Are you sure you want to permanently delete this exchange rate?</p>
+
+    <p class="reference-name"><%= @exchangerate.rate %></p>
+
+    <div class="form-buttons">
+      <%= submit_tag("Delete Exchange Rate") %>
+    </div>
+
+  <% end %>
+</div>
