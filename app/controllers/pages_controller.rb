@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-   layout "home"
+   #layout "home"
    
    def show
      render template: "pages/#{params[:page]}"

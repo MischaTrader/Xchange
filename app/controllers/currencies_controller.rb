@@ -55,6 +55,10 @@ class CurrenciesController < ApplicationController
     flash[:notice] = "Currency destroyed successfully."
     redirect_to(:action => 'index')
   end
+  
+  def home
+    redirect_to(:controller => 'pages', :action => 'home')
+  end
 
 private
 

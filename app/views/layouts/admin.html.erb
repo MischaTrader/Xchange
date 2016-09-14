@@ -1,46 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Xchange | <%= @page_title || "Admin" %></title>
-  <style>
-}     
-      body {
-    background-color: white;
-}
-
-h1 {
-    color: black;
-    text-align: Center;
-}
-
-h2 {
-    padding: 1px;
-    color: black;
-    text-align: Left;
-}
-
-p {
-    font-family: verdana;
-    font-size: 12px;
-}
-
-</style>
-  </head>
-  <body>
-    <div id="header">
-      <h1>Xchange</h1>
-    </div>
-    <div id="main">
-      <% if !flash[:notice].blank? %>
-        <div class="notice">
+ <head>
+       <title>Xchange | <%= @page_title || "Admin" %></title>
+   <style type="text/css">
+ 
+        #container{
+        background-color: white;
+        padding: 15px;
+        height:350px;
+        width:800px;
+        margin:150px auto;
+        
+       }
+       
+        h1 {
+        border: 1px solid black;
+        background-color: lightgrey;
+        text-align: center;
+        width:500px;
+        margin: 0px auto; 
+              
+       }
+       
+        #link {
+        background-color: white;
+        text-align: right;
+        width:400px;
+        margin: 0px auto; 
+        line-height: 100%;
+       } 
+        
+        #main {
+        background-color: white;
+        text-align: left;
+        width:400px;
+        margin: 0px auto; 
+        line-height: 100%;
+       }
+       
+        #content {
+        background-color: white;
+        text-align: left;
+        width:400px;
+        margin: 0px auto; 
+        line-height: 100%;
+       }   
+  
+                
+   </style> 
+ </head>
+    <body>
+      <div id="container">
+        <h1>Xchange</h1>
+        
+        <div id="link">
+        <%= link_to("Home", {:action => 'home'}, :class => 'back-link') %>
+        
+        <div id="main">
+         <% if !flash[:notice].blank? %>
+         <div class="notice">
           <%= flash[:notice] %>
-        </div>
-      <% end %>
+          <% end %>
+
       <div id="content">
         <%= yield %>
-      </div>
-    </div>
-    <div id="footer">
+  
+      <div id="footer">
       <p id="copyright">&copy; Mischa Peters </p>
     </div>
   </body>

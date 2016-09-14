@@ -11,7 +11,7 @@ class ExchangeRatesController < ApplicationController
   end
 
   def new
-    @exchangerate = ExchangeRate.new#({:name => "Default"})
+    #@exchangerate = ExchangeRate.new#({:name => "Default"})
   end
 
   def create
@@ -36,6 +36,10 @@ class ExchangeRatesController < ApplicationController
     exchangerate = ExchangeRate.find(params[:id]).destroy
     flash[:notice] = "Exchange Rate destroyed successfully."
     redirect_to(:action => 'index')
+  end
+  
+  def home
+    redirect_to(:controller => 'pages', :action => 'home')
   end
 
 

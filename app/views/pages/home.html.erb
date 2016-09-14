@@ -1,12 +1,47 @@
-
-<body>
-<div class="home">
-  <h2>Hoofdmenu</h2>
-
+<!DOCTYPE HTML>
+<html>
+<head>
+      <title>Xchange | <%= @page_title || "Home" %></title>
+      <style type="text/css">
+      #container{
+        background-color: white;
+        padding: 15px;
+        height:350px;
+        width:800px;
+        margin: 150px auto;
+        
+       }
+       
+      h1 {
+      border: 1px solid black;
+      background-color: lightgrey;
+      text-align: center;
+      width:500px;
+      margin: 0px auto; 
+      
+      }
+      
+      #content {
+      background-color: white;
+      text-align: left;
+      width:400px;
+      margin: 0px auto; 
+      line-height: 70%;
+      }   
+                
+      </style>
+</head>
+  <body>
+    <div id="container">
+    <h1>Xchange</h1>
+    
+    <div id="content">
+    <h2>Hoofdmenu</h2>
   <ol>
     <li><%= link_to("Currencies", {:controller => 'currencies'}) %></li>
     <li><%= link_to("Exchange Rates", {:controller => 'exchange_rates'}) %></li>
-  </ol>  
+  </ol>
+</div >
 
 </body>
-</div >
+</html>
