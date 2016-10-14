@@ -2,7 +2,7 @@
 <html>
  <head>
        <title>Xchange | <%= @page_title || "Admin" %></title>
-      <style type="text/css">
+   <style type="text/css">
  
         #container{
         background-color: white;
@@ -51,8 +51,11 @@
  </head>
     <body>
       <div id="container">
-        <h1>Xchange</h1>      
-       
+        <h1>Xchange</h1>
+        
+        <div id="link">
+        <%= link_to("Home", {:action => 'home'}, :class => 'back-link') %>
+        
         <div id="main">
          <% if !flash[:notice].blank? %>
          <div class="notice">
